@@ -10,25 +10,31 @@ let parola = prompt(`Inserisci una parola:`).toLocaleLowerCase().trim();
 console.log(parola);
 
 // 2. FUNZIONE CHECK PALINDROMO
-arrParola = [];
-for (i = parola.length; i > 0; i--) {
-    console.log(i);
+contrario(parola)
 
-    let prova = (parola[i - 1]);
-    console.log(prova);
+function contrario(fun){
+    arrParola = [];
+    
+    for (i = fun.length; i > 0; i--) {
+        console.log(i);
+    
+        let prova = (fun[i - 1]);
+        console.log(prova);
+    
+        arrParola.push(prova);
+    }
+    
+    console.log(arrParola);
+    
+    const reverse = arrParola.join(``);
+    console.log(reverse);
+    
+    if (fun != reverse) {
+        console.log(`Non è un palindromo`)
+    } else {
+        console.log(`Palindromo`)
+    }
 
-    arrParola.push(prova);
-}
-
-console.log(arrParola);
-
-const reverse = arrParola.join(``);
-console.log(reverse);
-
-if (parola != reverse) {
-    console.log(`Non è un palindromo`)
-} else {
-    console.log(`Palindromo`)
 }
 
 
