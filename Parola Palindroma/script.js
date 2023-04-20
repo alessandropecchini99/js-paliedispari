@@ -6,7 +6,7 @@
 
 
 // 1. CHIEDERE LA PAROLA
-let parola = prompt(`Inserisci una parola:`).toLocaleLowerCase().trim();
+let parola = prompt(`Inserisci una parola:`).toLowerCase().replace(/\s+/g, '');
 console.log(parola);
 
 // 2. FUNZIONE CHECK PALINDROMO
