@@ -29,6 +29,7 @@ function contrario(fun){
     const reverse = arrParola.join(``);
     console.log(reverse);
     
+    // 3. MOSTRARE IL RISULTATO
     if (fun != reverse) {
         console.log(`Non è un palindromo`)
     } else {
