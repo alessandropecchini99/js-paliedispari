@@ -34,7 +34,6 @@ function contrario(fun){
     } else {
         console.log(`Palindromo`)
     }
-
 }
 
 
