@@ -6,36 +6,46 @@
 
 
 // 1. CHIEDERE LA PAROLA
-let parola = prompt(`Inserisci una parola:`).toLowerCase().replace(/\s+/g, '');
-console.log(parola);
+const check = document.getElementById(`btn_check`);
 
-// 2. FUNZIONE CHECK PALINDROMO
-contrario(parola)
+check.addEventListener(`click`,
 
-function contrario(fun){
-    arrParola = [];
+function (){
+    let parola = (document.getElementById(`parola`).value).toLowerCase().replace(/\s+/g, '');
     
-    for (i = fun.length; i > 0; i--) {
-        console.log(i);
+    // 2. FUNZIONE CHECK PALINDROMO
+    contrario(parola)
+    function contrario(fun) {
+        arrParola = [];
+        
+        for (i = fun.length; i > 0; i--) {
+            console.log(i);
+            
+            let prova = (fun[i - 1]);
+            console.log(prova);
+            
+            arrParola.push(prova);
+        }
+        
+        console.log(arrParola);
+        
+        const reverse = arrParola.join(``);
+        console.log(reverse);
+        
+        console.log(parola);
     
-        let prova = (fun[i - 1]);
-        console.log(prova);
-    
-        arrParola.push(prova);
-    }
-    
-    console.log(arrParola);
-    
-    const reverse = arrParola.join(``);
-    console.log(reverse);
-    
-    // 3. MOSTRARE IL RISULTATO
-    if (fun != reverse) {
-        console.log(`Non è un palindromo`)
-    } else {
-        console.log(`Palindromo`)
+        // 3. MOSTRARE IL RISULTATO
+        if (fun != reverse) {
+            document.getElementById(`result`).innerHTML=`Non è un palindromo`
+            console.log(`Non è un palindromo`)
+        } else {
+            document.getElementById(`result`).innerHTML=`E' un Palindromo!`
+            console.log(`Palindromo`)
+        }
     }
 }
+
+)
 
 
 // ------------------------------
