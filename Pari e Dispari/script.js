@@ -53,7 +53,7 @@ btnPlay.addEventListener(`click`,
 // ------------------------------
 
 
-// ALTRO
+// FUNCTION
 function randomNumber(min, max) {
     const random = (Math.floor(Math.random() * max) + min);
     return random
