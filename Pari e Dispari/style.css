@@ -9,6 +9,12 @@ body {
     align-items: center;
 }
 
+div {
+    border: 10px double white;
+    border-radius: 20px;
+    padding: 70px;
+}
+
 h1 {
     margin-top: 0.5em;
 }
@@ -25,5 +31,4 @@ button {
 input {
     border: 5px solid white;
     border-radius: 5px;
-    margin-top: 1em;
 }
